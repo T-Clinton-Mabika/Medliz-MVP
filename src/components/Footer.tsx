@@ -172,8 +172,8 @@ export const Footer: React.FC = () => {
                   <img
                     src={
                       isDark
-                        ? "/visualAssets/vectors/dark-mode-voldr-logo.svg"
-                        : "/visualAssets/vectors/light-mode-voldr-logo.svg"
+                        ? "/visualAssets/vectors/dark-mode-logo-voldr.svg"
+                        : "/visualAssets/vectors/light-mode--logo-voldr.svg"
                     }
                     alt="Voldr Logo"
                     className="h-full w-auto object-contain"
