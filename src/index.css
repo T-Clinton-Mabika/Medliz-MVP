@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700&family=Kaushan+Script&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
+@import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+/**
+ * Custom Tailwind Theme Configuration.
+ * Defines brand colors, typography, and utility variants.
+ */
+@theme {
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --font-marker: "Kaushan Script", cursive;
+  --font-article: "Lora", Georgia, serif;
+
+  --color-medical-secondary: #0c89c2;
+  --color-medical-accent: #f40009;
+  --color-courses-hover: #008000;
+  --color-blog-hover: #4338ca;
+
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-info: #00ccff;
+  --color-warning: #f59e0b;
+
+  --color-community: #8b5cf6;
+  --color-certificates: #10b981;
+  --color-verified: #f59e0b;
+  --color-accent-gold: #ffd000;
+
+  --color-sponsor-hover: #ffd933;
+  --color-sponsor-glow: #ffd000;
+
+  --color-dark-bg: #09181b;
+  --color-alternate: #00ccff;
+  --color-light-bg: #f1f9fe;
+
+  --color-default-glow: #7c3aed;
+  --color-marker-ink: #f1f9fe;
+  --color-marker-outline: #0ea5e9;
+
+  --color-hero-btn-dark-start: #000a0d;
+  --color-hero-btn-dark-end: #00141a;
+  --color-hero-btn-light-start: #f1f9fe;
+  --color-hero-btn-light-end: #d9f7ff;
+  --color-hero-btn-text-light: #f1f9fe;
+  --color-hero-btn-text-dark: #000a0d;
+  --color-hero-btn-hover-blog: #9b96f4;
+  --color-hero-btn-hover-courses: #008000;
+  --color-alternate-random-d: #40b5ad;
+  --color-alternate-random-l: #004d4d;
+  --color-alternate-other-d: #e67e22;
+  --color-alternate-other-l: #ede4e0;
+
+  --color-site-grey-light-primary: #2b2d2d;
+  --color-site-grey-light-secondary: #4b4d4d;
+  --color-site-grey-dark-primary: #0f0;
+  --color-site-grey-dark-secondary: #d7dddf;
+
+  --color-testing-vone: #9b96f4;
+  --color-testing-vtwo: #d07dff;
+  --color-testing-vthree: #350b40;
+
+  --color-hero-pill-text: #f1f9fe;
+  --color-hero-pill-border-light: #000a0d;
+  --color-hero-pill-border-dark: #e3eff7;
+
+  --color-home-btn-light: #001f26;
+  --color-home-btn-dark: #e3eff7;
+
+  --color-app-bg: var(--bg-background);
+  --color-app-text: var(--text-baseElementColor);
+  --color-app-surface: var(--bg-foreground);
+  --color-app-muted: var(--text-mutedElementColor);
+  --color-app-border: var(--border-borderOutline);
+
+  --color-medical-primary: var(--color-general);
+  --color-courses-primary: var(--color-courses);
+  --color-blog-primary: var(--color-blog);
+  --color-sponsor-primary: var(--color-patrons);
+
+  --color-auxiliary-red-tint: #fee6e6;
+  --color-auxiliary-red-neutral: #f40009;
+  --color-auxiliary-red-shade: #180001;
+  --color-auxiliary-purple-tint: #aca8f5;
+  --color-auxiliary-purple-neutral: #9b96f4;
+  --color-auxiliary-purple-shade: #060080;
+  --color-auxiliary-green-tint: #e0fbe2;
+  --color-auxiliary-green-neutral: #02ff03;
+  --color-auxiliary-green-shade: #004200;
+  --color-auxiliary-blue-tint: #caefeb;
+  --color-auxiliary-blue-neutral: #40b5ad;
+  --color-auxiliary-blue-shade: #0c302b;
+  --color-auxiliary-orange: #e67e22;
+  --color-auxiliary-yellow: #fdc700;
+  --color-auxiliary-white: #d9f7ff;
+  --color-auxiliary-black: #00141a;
+  --color-auxiliary-grey-one: #4b4d4d;
+  --color-auxiliary-grey-two: #a4aaac;
+}
+
+/**
+ * Base Styles and Global Overrides.
+ */
+@layer base {
+  :root {
+    color-scheme: light;
+
+    --color-general: #22525e;
+    --color-courses: #2a5e22;
+    --color-blog: #350b40;
+    --color-patrons: #99821f;
+
+    --bg-background: #f8f9fa;
+    --bg-foreground: #ebf3f5;
+    --bg-inverse-foreground: #071012;
+    --bg-hoverElement: #c4cacc;
+    --text-baseElementColor: #000a0d;
+    --text-inverseBaseElementColor: #f8f9fa;
+    --text-mutedElementColor: #2b2d2d;
+    --text-inverseMutedElementColor: #c4cacc;
+    --border-borderOutline: #928f9f;
+    --border-inverseBorderOutline: #4c6061;
+
+    --bg-main: #e3eff7;
+    --text-main: #000a0d;
+    --text-muted: #64748b;
+    --bg-surface: #f1f9fe;
+    --border-subtle: rgba(0, 10, 13, 0.1);
+
+    /* Hero Colors (Light Mode) */
+    --color-home-hero-underline: #00ccff;
+    --color-home-hero-text: #0c89c2;
+    --color-courses-hero-underline: #d35400;
+    --color-courses-hero-text: #d35400;
+    --color-blog-hero-underline: #5850ec;
+    --color-blog-hero-text: #9d50ff;
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --color-general: #51c4e0;
+    --color-courses: #64e051;
+    --color-blog: #d07dff;
+    --color-patrons: #ffd933;
+
+    --bg-background: #000a0d;
+    --bg-foreground: #071012;
+    --bg-inverse-foreground: #ebf3f5;
+    --bg-hoverElement: #2b2d2d;
+    --text-baseElementColor: #f8f9fa;
+    --text-inverseBaseElementColor: #000a0d;
+    --text-mutedElementColor: #c4cacc;
+    --text-inverseMutedElementColor: #2b2d2d;
+    --border-borderOutline: #4c6061;
+    --border-inverseBorderOutline: #928f9f;
+
+    --bg-main: #000a0d;
+    --text-main: #f1f9fe;
+    --text-muted: #94a3b8;
+    --bg-surface: #001f26;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+
+    /* Hero Colors (Dark Mode) */
+    --color-home-hero-underline: #0c89c2;
+    --color-home-hero-text: #00ccff;
+    --color-courses-hero-underline: #e67e22;
+    --color-courses-hero-text: #e67e22;
+    --color-blog-hero-underline: #9d50ff;
+    --color-blog-hero-text: #5850ec;
+  }
+
+  body {
+    @apply font-sans antialiased transition-colors duration-300;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold;
+  }
+  h1 {
+    @apply text-center;
+  }
+}
+
+/**
+ * Custom Typography Scales.
+ */
+@layer components {
+  .display-xl {
+    @apply text-4xl md:text-5xl lg:text-7xl font-bold leading-tight;
+  }
+  .display-lg {
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  .display-md {
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-xl {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  .heading-lg {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .heading-md {
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  .body-md {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  .body-sm {
+    @apply text-sm leading-relaxed;
+  }
+}
+
+@keyframes subtle-bounce {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(4px);
+  }
+}
+
+.tooltip-bounce {
+  animation: subtle-bounce 1.5s ease-in-out infinite;
+}
+
+/**
+  * Custom Utility Classes.
+  */
+.glass-header {
+  @apply z-50 backdrop-blur-md;
+  background-color: color-mix(in srgb, var(--bg-main) 70%, transparent);
+}
+
+.glass-header:not(.scrolled) {
+  @apply border-b border-zinc-200/50 dark:border-zinc-800/50;
+}
+
+.glass-platform {
+  @apply backdrop-blur-lg border border-white/30 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)];
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark .glass-platform {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer;
+}
+
+.markdown-body {
+  @apply prose prose-zinc dark:prose-invert max-w-none;
+}
+
+.markdown-body h1 {
+  @apply text-3xl mb-6;
+}
+.markdown-body h2 {
+  @apply text-2xl mt-8 mb-4;
+}
+.markdown-body p {
+  @apply mb-4 leading-relaxed font-article text-[17px] leading-relaxed;
+}
+
+.markdown-body p,
+.markdown-body li,
+.markdown-body blockquote,
+.markdown-body td,
+.markdown-body th {
+  font-family: var(--font-article);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   ANIMATED GLOW BORDER
+   ============================================ */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glow-spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.glow-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-border::before,
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    var(--glow-color, var(--color-default-glow)),
+    color-mix(in srgb, var(--glow-color, var(--color-default-glow)) 60%, white),
+    var(--glow-color, var(--color-default-glow)),
+    transparent 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-border::after {
+  filter: blur(10px);
+  z-index: -2;
+}
+
+.glow-border:hover::before,
+.glow-border:hover::after {
+  opacity: 1;
+  animation: glow-spin 3s linear infinite;
+}
+
+.glow-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced glassmorphic platform for specific cases like contributor cards */
+.contributor-glass-platform {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Add to index.css - Sponsor card specific styles */
+
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Sponsor card specific glass platform */
+.sponsor-glass-platform {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(0, 114, 143, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Override for contributor-glass-platform to be more generic */
+.contributor-glass-platform,
+.sponsor-glass-platform {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Card specific glass platform (opaquer version of hero glass) */
+.card-glass-platform {
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+.dark .card-glass-platform {
+  background: rgba(0, 10, 13, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
