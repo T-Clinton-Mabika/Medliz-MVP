@@ -80,9 +80,6 @@
   --color-courses-primary: var(--color-courses);
   --color-blog-primary: var(--color-blog);
   --color-sponsor-primary: var(--color-patrons);
-  --color-home-hero-text: var(--color-medical-primary);
-  --color-courses-primary: var(--color-courses-primary);
-  --color-blog-hero-text: var(--color-blog-primary);
 
   --color-auxiliary-red-tint: #fee6e6;
   --color-auxiliary-red-neutral: #f40009;
