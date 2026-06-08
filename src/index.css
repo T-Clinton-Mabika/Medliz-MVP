@@ -80,6 +80,9 @@
   --color-courses-primary: var(--color-courses);
   --color-blog-primary: var(--color-blog);
   --color-sponsor-primary: var(--color-patrons);
+  --color-home-hero-text: var(--color-medical-primary);
+  --color-courses-primary: var(--color-courses-primary);
+  --color-blog-hero-text: var(--color-blog-primary);
 
   --color-auxiliary-red-tint: #fee6e6;
   --color-auxiliary-red-neutral: #f40009;
@@ -131,12 +134,12 @@
     --border-subtle: rgba(0, 10, 13, 0.1);
 
     /* Hero Colors (Light Mode) */
-    --color-home-hero-underline: #00ccff;
-    --color-home-hero-text: #0c89c2;
-    --color-courses-hero-underline: #d35400;
-    --color-courses-hero-text: #d35400;
-    --color-blog-hero-underline: #5850ec;
-    --color-blog-hero-text: #9d50ff;
+    --color-hero-underline-home: #00ccff;
+    --color-hero-text-home: #0c89c2;
+    --color-hero-underline-courses: #d35400;
+    --color-hero-text-courses: #d35400;
+    --color-hero-underline-blog: #5850ec;
+    --color-hero-text-blog: #9d50ff;
   }
 
   .dark {
@@ -165,12 +168,12 @@
     --border-subtle: rgba(255, 255, 255, 0.1);
 
     /* Hero Colors (Dark Mode) */
-    --color-home-hero-underline: #0c89c2;
-    --color-home-hero-text: #00ccff;
-    --color-courses-hero-underline: #e67e22;
-    --color-courses-hero-text: #e67e22;
-    --color-blog-hero-underline: #9d50ff;
-    --color-blog-hero-text: #5850ec;
+    --color-hero-underline-home: #0c89c2;
+    --color-hero-text-home: #00ccff;
+    --color-hero-underline-courses: #e67e22;
+    --color-hero-text-courses: #e67e22;
+    --color-hero-underline-blog: #9d50ff;
+    --color-hero-text-blog: #5850ec;
   }
 
   body {

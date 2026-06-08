@@ -75,8 +75,8 @@ export const MedBlog: React.FC = () => {
           <>
             Engage with Riveting{" "}
             <MarkerUnderline
-              underlineVar="--color-blog-hero-underline"
-              textVar="--color-blog-hero-text"
+              underlineVar="--color-auxiliary-purple-neutral"
+              textVar="--color-blog-primary"
             >
               First-hand
             </MarkerUnderline>{" "}

@@ -77,8 +77,8 @@ export const Home: React.FC = () => {
           <>
             Forge Your Future with{" "}
             <MarkerUnderline
-              underlineVar="--color-home-hero-underline"
-              textVar="--color-home-hero-text"
+              underlineVar="--color-auxiliary-blue-neutral"
+              textVar="--color-medical-primary"
             >
               Expert-Led
             </MarkerUnderline>{" "}

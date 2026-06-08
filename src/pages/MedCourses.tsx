@@ -75,8 +75,8 @@ export const MedCourses: React.FC = () => {
           <>
             Sharpen Your Skills with{" "}
             <MarkerUnderline
-              underlineVar="--color-courses-hero-underline"
-              textVar="--color-courses-hero-text"
+              underlineVar="--color-auxiliary-green-neutral"
+              textVar="--color-courses-primary"
             >
               Focused
             </MarkerUnderline>{" "}

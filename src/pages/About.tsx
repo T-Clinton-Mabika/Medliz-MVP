@@ -334,7 +334,7 @@ export const About: React.FC = () => {
                           (post) => (
                             <Link
                               key={post.id}
-                              to={`/blog/${post.id}`}
+                              to={`/blog/${post.slug}`}
                               className="p-4 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-medical-primary transition-colors flex justify-between items-center group"
                             >
                               <span className="font-medium group-hover:text-medical-primary transition-colors">
@@ -361,7 +361,7 @@ export const About: React.FC = () => {
                           (course) => (
                             <Link
                               key={course.id}
-                              to={`/courses/${course.id}`}
+                              to={`/courses/${course.slug}`}
                               className="p-4 bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-medical-primary transition-colors flex justify-between items-center group"
                             >
                               <span className="font-medium group-hover:text-medical-primary transition-colors">
