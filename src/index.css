@@ -56,7 +56,6 @@
 
   --color-site-grey-light-primary: #2b2d2d;
   --color-site-grey-light-secondary: #4b4d4d;
-  --color-site-grey-dark-primary: #0f0;
   --color-site-grey-dark-secondary: #d7dddf;
 
   --color-testing-vone: #9b96f4;
@@ -109,7 +108,7 @@
     color-scheme: light;
 
     --color-general: #22525e;
-    --color-courses: #2a5e22;
+    --color-courses: #147638;
     --color-blog: #350b40;
     --color-patrons: #99821f;
 
